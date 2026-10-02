@@ -1,0 +1,109 @@
+version: "1.0"
+
+description: >
+  Supplier risk intelligence ontology for representing suppliers,
+  canonical companies, corporate relationships, locations,
+  industries and risk information.
+
+entities:
+
+  Supplier:
+    description: >
+      A supplier record originating from an enterprise procurement
+      or ERP system.
+    properties:
+      - supplier_id
+      - original_name
+      - normalized_name
+      - match_score
+      - match_method
+
+  Company:
+    description: >
+      A canonical legal or commercial company entity.
+    properties:
+      - company_id
+      - canonical_name
+      - legal_name
+      - country
+      - city
+      - website
+      - industry
+
+  Country:
+    description: >
+      A geographic country associated with a company.
+
+  Industry:
+    description: >
+      An industry or business sector associated with a company.
+
+  Risk:
+    description: >
+      A risk record associated with a company.
+    properties:
+      - risk_type
+      - source
+      - effective_date
+      - last_updated
+
+  Sanction:
+    description: >
+      A sanctions-related record associated with a company.
+    properties:
+      - source
+      - effective_date
+
+relationships:
+
+  SUPPLIES:
+    from: Supplier
+    to: Company
+    description: >
+      Indicates that a supplier record refers to a canonical company.
+
+  OWNS:
+    from: Company
+    to: Company
+    description: >
+      Indicates an ownership relationship between companies.
+
+  SUBSIDIARY_OF:
+    from: Company
+    to: Company
+    description: >
+      Indicates that one company is a subsidiary of another company.
+
+  LOCATED_IN:
+    from: Company
+    to: Country
+    description: >
+      Indicates the country in which a company is located.
+
+  OPERATES_IN:
+    from: Company
+    to: Industry
+    description: >
+      Indicates the industry in which a company operates.
+
+  HAS_RISK:
+    from: Company
+    to: Risk
+    description: >
+      Associates a company with a risk record.
+
+  SUBJECT_TO:
+    from: Company
+    to: Sanction
+    description: >
+      Associates a company with a sanctions record.
+
+provenance:
+
+  required_properties:
+    - source
+    - confidence
+
+  optional_properties:
+    - effective_date
+    - last_updated
