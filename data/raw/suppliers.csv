@@ -1,0 +1,41 @@
+supplier_id,supplier_name,address,country,city,postal_code,website,category
+SUP-0001,Siemens AG,"Werner-von-Siemens-Strasse 1",Germany,Munich,80333,https://www.siemens.com,Industrial Technology
+SUP-0002,SIEMENS AG,"Werner-von-Siemens-Strasse 1",Germany,Munich,80333,https://www.siemens.com,Industrial Technology
+SUP-0003,Siemns AG,"Werner-von-Siemens-Strasse 1",Germany,Munich,80333,https://www.siemens.com,Industrial Technology
+SUP-0004,Siemens Aktiengesellschaft,"Werner-von-Siemens-Strasse 1",Germany,Munich,80333,https://www.siemens.com,Industrial Technology
+SUP-0005,ABC Electronics Ltd.,"25 Industrial Road",Germany,Berlin,10115,https://example.com/abc,Electronics
+SUP-0006,ABC Electronics Limited,"25 Industrial Road",Germany,Berlin,10115,https://example.com/abc,Electronics
+SUP-0007,A.B.C Electronics,"25 Industrial Road",Germany,Berlin,10115,https://example.com/abc,Electronics
+SUP-0008,ABC Elec.,"25 Industrial Road",Germany,Berlin,10115,https://example.com/abc,Electronics
+SUP-0009,Bosch GmbH,"Robert-Bosch-Platz 1",Germany,Stuttgart,70839,https://www.bosch.com,Automotive
+SUP-0010,Robert Bosch GmbH,"Robert-Bosch-Platz 1",Germany,Stuttgart,70839,https://www.bosch.com,Automotive
+SUP-0011,BOSCH GMBH,"Robert-Bosch-Platz 1",Germany,Stuttgart,70839,https://www.bosch.com,Automotive
+SUP-0012,Robert Bosch,"Robert-Bosch-Platz 1",Germany,Stuttgart,70839,https://www.bosch.com,Automotive
+SUP-0013,Contoso Manufacturing GmbH,"Industriestrasse 10",Germany,Frankfurt,60311,https://contoso.example,Manufacturing
+SUP-0014,Contoso Manufacturing,"Industriestrasse 10",Germany,Frankfurt,60311,https://contoso.example,Manufacturing
+SUP-0015,Contoso Mfg GmbH,"Industriestrasse 10",Germany,Frankfurt,60311,https://contoso.example,Manufacturing
+SUP-0016,Contoso MFG.,"Industriestrasse 10",Germany,Frankfurt,60311,https://contoso.example,Manufacturing
+SUP-0017,Global Industrial Components AG,"Industriepark 5",Germany,Hamburg,20095,https://global-components.example,Industrial Components
+SUP-0018,Global Industrial Components,"Industriepark 5",Germany,Hamburg,20095,https://global-components.example,Industrial Components
+SUP-0019,Global Ind. Components AG,"Industriepark 5",Germany,Hamburg,20095,https://global-components.example,Industrial Components
+SUP-0020,Global Industrial Component,"Industriepark 5",Germany,Hamburg,20095,https://global-components.example,Industrial Components
+SUP-0021,TechParts Europe GmbH,"Technikstrasse 20",Germany,Cologne,50667,https://techparts.example,Electronics
+SUP-0022,TechParts Europe,"Technikstrasse 20",Germany,Cologne,50667,https://techparts.example,Electronics
+SUP-0023,Tech Parts Europe GmbH,"Technikstrasse 20",Germany,Cologne,50667,https://techparts.example,Electronics
+SUP-0024,TechParts Eur.,"Technikstrasse 20",Germany,Cologne,50667,https://techparts.example,Electronics
+SUP-0025,Northstar Components Ltd,"Station Road 14",United Kingdom,London,EC1A 1AA,https://northstar.example,Components
+SUP-0026,Northstar Components Limited,"Station Road 14",United Kingdom,London,EC1A 1AA,https://northstar.example,Components
+SUP-0027,North Star Components Ltd.,"Station Road 14",United Kingdom,London,EC1A 1AA,https://northstar.example,Components
+SUP-0028,Nothstar Components,"Station Road 14",United Kingdom,London,EC1A 1AA,https://northstar.example,Components
+SUP-0029,Alpine Materials AG,"Industriestrasse 44",Switzerland,Zurich,8001,https://alpine-materials.example,Materials
+SUP-0030,Alpine Materials,"Industriestrasse 44",Switzerland,Zurich,8001,https://alpine-materials.example,Materials
+SUP-0031,Alpine Material AG,"Industriestrasse 44",Switzerland,Zurich,8001,https://alpine-materials.example,Materials
+SUP-0032,Alpine Matls AG,"Industriestrasse 44",Switzerland,Zurich,8001,https://alpine-materials.example,Materials
+SUP-0033,Euro Logistics GmbH,"Hafenstrasse 12",Germany,Hamburg,20457,https://euro-logistics.example,Logistics
+SUP-0034,Euro Logistics,"Hafenstrasse 12",Germany,Hamburg,20457,https://euro-logistics.example,Logistics
+SUP-0035,Euro Logistik GmbH,"Hafenstrasse 12",Germany,Hamburg,20457,https://euro-logistics.example,Logistics
+SUP-0036,Euro Logistics GMBH,"Hafenstrasse 12",Germany,Hamburg,20457,https://euro-logistics.example,Logistics
+SUP-0037,DataWorks Solutions GmbH,"Digitalstrasse 7",Germany,Berlin,10117,https://dataworks.example,Software
+SUP-0038,DataWorks Solutions,"Digitalstrasse 7",Germany,Berlin,10117,https://dataworks.example,Software
+SUP-0039,Data Works Solutions GmbH,"Digitalstrasse 7",Germany,Berlin,10117,https://dataworks.example,Software
+SUP-0040,DataWorks Sol. GmbH,"Digitalstrasse 7",Germany,Berlin,10117,https://dataworks.example,Software
