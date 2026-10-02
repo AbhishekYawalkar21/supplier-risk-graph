@@ -1,4 +1,3 @@
-import pandas as pd
 
 from src.ingestion.entity_resolution import (
     exact_match,

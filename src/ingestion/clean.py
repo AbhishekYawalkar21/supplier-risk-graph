@@ -5,7 +5,6 @@ import unicodedata
 
 import pandas as pd
 
-
 COMPANY_SUFFIXES = [
     "aktiengesellschaft",
     "gesellschaft mit beschränkter haftung",
