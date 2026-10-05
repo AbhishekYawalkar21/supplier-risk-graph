@@ -71,6 +71,60 @@ def get_supplier_company_relationships() -> list[dict]:
     finally:
         driver.close()
 
+def find_risk_paths(
+    supplier_id: str,
+    max_hops: int = 4,
+    ) -> list[dict]:
+
+    driver = GraphDatabase.driver(
+        URI,
+        auth=(USERNAME, PASSWORD),
+    )
+
+    query = """
+    MATCH p = 
+        (s:Supplier {
+            supplier_id: $supplier_id
+        })
+        -[:SUPPLIES]->
+        (company:Company)
+        -[:SUBSIDIARY_OF*0..4]-
+        (risk_company:Company)
+        -[:HAS_RISK]->
+        (risk:Risk)
+
+    RETURN
+        s.original_name AS supplier,
+        [node IN nodes(p) |
+            CASE
+                WHEN node:Supplier
+                    THEN node.original_name
+                WHEN node:Company
+                    THEN node.canonical_name
+                WHEN node:Risk
+                    THEN node.risk_type
+            END
+        ] AS path,
+        risk.risk_type AS risk_type,
+        risk.confidence AS risk_confidence
+
+    ORDER BY length(p)
+    """
+
+    try:
+        with driver.session() as session:
+            result = session.run(
+                query,
+                supplier_id=supplier_id,
+            )
+
+            return [
+                record.data()
+                for record in result
+            ]
+
+    finally:
+        driver.close()
 
 if __name__ == "__main__":
     print(
@@ -85,3 +139,8 @@ if __name__ == "__main__":
 
     for row in get_supplier_company_relationships():
         print(row)
+
+    results = find_risk_paths("SUP-0001")
+
+    for result in results:
+        print(result)
