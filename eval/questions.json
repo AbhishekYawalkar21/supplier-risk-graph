@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Which companies have sanctions screening risks?",
+    "expected_risk_type": "SANCTIONS_SCREENING_FLAG"
+  },
+  {
+    "question": "Which companies have export control risks?",
+    "expected_risk_type": "EXPORT_CONTROL_FLAG"
+  },
+  {
+    "question": "Which companies have geographic risk?",
+    "expected_risk_type": "HIGH_RISK_JURISDICTION"
+  },
+  {
+    "question": "Which supplier has indirect exposure through a corporate parent?",
+    "expected_risk_type": "SANCTIONS_SCREENING_FLAG"
+  }
+]
