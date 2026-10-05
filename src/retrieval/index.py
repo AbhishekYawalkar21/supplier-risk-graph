@@ -1,13 +1,18 @@
 from __future__ import annotations
+import os
 
+from dotenv import load_dotenv
 import pandas as pd
 from neo4j import GraphDatabase
 
 from src.retrieval.embeddings import embed_text
+from src.config import NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
 
-URI = "bolt://localhost:7687"
-USERNAME = "neo4j"
-PASSWORD = "supplier-risk-local"
+load_dotenv()
+
+URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD", "supplier-risk-local")
 
 
 def create_vector_index() -> None:
