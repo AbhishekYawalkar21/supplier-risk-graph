@@ -10,7 +10,6 @@ venv/
 
 # Environment variables
 .env
-.env.*
 
 # IDE
 .vscode/
@@ -22,6 +21,7 @@ Thumbs.db
 
 # Data generated during processing
 data/processed/*
+!data/processed/.gitkeep
 
 # Neo4j
 neo4j/logs/
@@ -36,3 +36,5 @@ htmlcov/
 # Temporary files
 *.tmp
 *.log
+
+.streamlit/secrets.toml
