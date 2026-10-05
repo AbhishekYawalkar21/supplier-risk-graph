@@ -1,0 +1,7 @@
+parent_company_id,subsidiary_company_id,relationship_type,ownership_percent,source,confidence
+COMP-0001,COMP-0004,SUBSIDIARY_OF,75.0,demo_corporate_dataset,0.96
+COMP-0004,COMP-0005,SUBSIDIARY_OF,80.0,demo_corporate_dataset,0.94
+COMP-0005,COMP-0006,SUBSIDIARY_OF,65.0,demo_corporate_dataset,0.92
+COMP-0002,COMP-0007,SUBSIDIARY_OF,60.0,demo_corporate_dataset,0.90
+COMP-0008,COMP-0009,SUBSIDIARY_OF,70.0,demo_corporate_dataset,0.91
+COMP-0009,COMP-0010,SUBSIDIARY_OF,55.0,demo_corporate_dataset,0.88

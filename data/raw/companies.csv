@@ -1,11 +1,11 @@
-company_id,canonical_name,legal_name,country,city,website,industry
-COMP-0001,Siemens,Siemens Aktiengesellschaft,Germany,Munich,https://www.siemens.com,Industrial Technology
-COMP-0002,ABC Electronics,ABC Electronics Limited,Germany,Berlin,https://example.com/abc,Electronics
-COMP-0003,Bosch,Robert Bosch GmbH,Germany,Stuttgart,https://www.bosch.com,Automotive
-COMP-0004,Contoso Manufacturing,Contoso Manufacturing GmbH,Germany,Frankfurt,https://contoso.example,Manufacturing
-COMP-0005,Global Industrial Components,Global Industrial Components AG,Germany,Hamburg,https://global-components.example,Industrial Components
-COMP-0006,TechParts Europe,TechParts Europe GmbH,Germany,Cologne,https://techparts.example,Electronics
-COMP-0007,Northstar Components,Northstar Components Limited,United Kingdom,London,https://northstar.example,Components
-COMP-0008,Alpine Materials,Alpine Materials AG,Switzerland,Zurich,https://alpine-materials.example,Materials
-COMP-0009,Euro Logistics,Euro Logistics GmbH,Germany,Hamburg,https://euro-logistics.example,Logistics
-COMP-0010,DataWorks Solutions,DataWorks Solutions GmbH,Germany,Berlin,https://dataworks.example,Software
+company_id,canonical_name,legal_name,country,city,website,industry,description
+COMP-0001,Siemens,Siemens Aktiengesellschaft,Germany,Munich,https://www.siemens.com,Industrial Technology,"Industrial technology and engineering company used as demonstration data."
+COMP-0002,ABC Electronics,ABC Electronics Limited,Germany,Berlin,https://example.com/abc,Electronics,"Electronics components supplier used as demonstration data."
+COMP-0003,Bosch,Robert Bosch GmbH,Germany,Stuttgart,https://www.bosch.com,Automotive,"Automotive and industrial technology company used as demonstration data."
+COMP-0004,Contoso Manufacturing,Contoso Manufacturing GmbH,Germany,Frankfurt,https://contoso.example,Manufacturing,"Manufacturing company used as demonstration data."
+COMP-0005,Global Industrial Components,Global Industrial Components AG,Germany,Hamburg,https://global-components.example,Industrial Components,"Industrial components company used as demonstration data."
+COMP-0006,TechParts Europe,TechParts Europe GmbH,Germany,Cologne,https://techparts.example,Electronics,"Electronics and technology parts supplier used as demonstration data."
+COMP-0007,Northstar Components,Northstar Components Limited,United Kingdom,London,https://northstar.example,Components,"Components company used as demonstration data."
+COMP-0008,Alpine Materials,Alpine Materials AG,Switzerland,Zurich,https://alpine-materials.example,Materials,"Industrial materials company used as demonstration data."
+COMP-0009,Euro Logistics,Euro Logistics GmbH,Germany,Hamburg,https://euro-logistics.example,Logistics,"European logistics company used as demonstration data."
+COMP-0010,DataWorks Solutions,DataWorks Solutions GmbH,Germany,Berlin,https://dataworks.example,Software,"Enterprise software company used as demonstration data."

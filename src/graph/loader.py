@@ -3,6 +3,7 @@ from __future__ import annotations
 import pandas as pd
 from neo4j import GraphDatabase
 
+
 URI = "bolt://localhost:7687"
 USERNAME = "neo4j"
 PASSWORD = "supplier-risk-local"
@@ -22,7 +23,8 @@ def load_companies(session, companies: pd.DataFrame) -> None:
         c.country = company.country,
         c.city = company.city,
         c.website = company.website,
-        c.industry = company.industry
+        c.industry = company.industry,
+        c.description = company.description
     """
 
     session.run(
@@ -87,7 +89,73 @@ def load_suppliers(
     )
 
 
+def load_corporate_relationships(
+    session,
+    relationships: pd.DataFrame,
+) -> None:
+
+    query = """
+    UNWIND $relationships AS relationship
+
+    MATCH (parent:Company {
+        company_id: relationship.parent_company_id
+    })
+
+    MATCH (child:Company {
+        company_id: relationship.subsidiary_company_id
+    })
+
+    MERGE (child)-[r:SUBSIDIARY_OF]->(parent)
+
+    SET
+        r.ownership_percent =
+            toFloat(relationship.ownership_percent),
+        r.source = relationship.source,
+        r.confidence =
+            toFloat(relationship.confidence)
+    """
+
+    session.run(
+        query,
+        relationships=relationships.to_dict("records"),
+    )
+
+
+def load_risks(
+    session,
+    risks: pd.DataFrame,
+) -> None:
+
+    query = """
+    UNWIND $risks AS risk
+
+    MATCH (company:Company {
+        company_id: risk.company_id
+    })
+
+    MERGE (r:Risk {
+        risk_id: risk.risk_id
+    })
+
+    SET
+        r.risk_type = risk.risk_type,
+        r.risk_description = risk.risk_description,
+        r.source = risk.source,
+        r.effective_date = risk.effective_date,
+        r.last_updated = risk.last_updated,
+        r.confidence = toFloat(risk.confidence)
+
+    MERGE (company)-[:HAS_RISK]->(r)
+    """
+
+    session.run(
+        query,
+        risks=risks.to_dict("records"),
+    )
+
+
 def load_graph() -> None:
+
     companies = pd.read_csv(
         "data/raw/companies.csv"
     )
@@ -100,6 +168,14 @@ def load_graph() -> None:
         "data/processed/supplier_company_matches.csv"
     )
 
+    relationships = pd.read_csv(
+        "data/raw/corporate_relationships.csv"
+    )
+
+    risks = pd.read_csv(
+        "data/raw/risk_entities.csv"
+    )
+
     driver = GraphDatabase.driver(
         URI,
         auth=(USERNAME, PASSWORD),
@@ -107,12 +183,34 @@ def load_graph() -> None:
 
     try:
         with driver.session() as session:
-            load_companies(session, companies)
-            load_suppliers(session, suppliers, matches)
+            load_companies(
+                session,
+                companies,
+            )
+
+            load_suppliers(
+                session,
+                suppliers,
+                matches,
+            )
+
+            load_corporate_relationships(
+                session,
+                relationships,
+            )
+
+            load_risks(
+                session,
+                risks,
+            )
+
     finally:
         driver.close()
 
 
 if __name__ == "__main__":
     load_graph()
-    print("Supplier Risk Graph loaded into Neo4j.")
+
+    print(
+        "Supplier Risk Graph loaded into Neo4j."
+    )

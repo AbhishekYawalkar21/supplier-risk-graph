@@ -29,6 +29,7 @@ entities:
       - city
       - website
       - industry
+      - description
 
   Country:
     description: >
@@ -42,10 +43,13 @@ entities:
     description: >
       A risk record associated with a company.
     properties:
+      - risk_id
       - risk_type
+      - risk_description
       - source
       - effective_date
       - last_updated
+      - confidence
 
   Sanction:
     description: >

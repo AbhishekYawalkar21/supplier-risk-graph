@@ -1,0 +1,4 @@
+risk_id,company_id,risk_type,risk_description,source,effective_date,last_updated,confidence
+RISK-001,COMP-0010,SANCTIONS_SCREENING_FLAG,"Synthetic demonstration risk associated with the company.",demo_risk_dataset,2026-09-01,2026-09-01,0.98
+RISK-002,COMP-0006,EXPORT_CONTROL_FLAG,"Synthetic demonstration export-control risk associated with the company.",demo_risk_dataset,2026-09-01,2026-09-01,0.94
+RISK-003,COMP-0007,HIGH_RISK_JURISDICTION,"Synthetic demonstration geographic risk associated with the company.",demo_risk_dataset,2026-09-01,2026-09-01,0.90
